@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clase_6_11_2023.MainPage"
+             BackgroundColor="Gray">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Label
+                Padding="0,30,0,20"
+                Text="Registro de Estudiantes"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" 
+                VerticalOptions="Start"
+                TextColor="White"/>
+
+            <Label
+                Text="Nombre"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="White"/>
+
+            <Entry
+                x:Name="NombreEntry"
+                Text="{Binding Nombre}"
+                Placeholder="Ingrese su Nombre"
+                TextColor="White"
+                />
+
+            <Label
+                Text="Apellido"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="White"/>
+
+            <Entry
+                x:Name="ApellidoEntry"
+                Text="{Binding Apellido}"
+                Placeholder="Ingrese su Apellido"
+                TextColor="White"/>
+
+            <Label
+                Text="Materia"
+                FontSize="20"
+                HorizontalOptions="Start"
+                TextColor="White"/>
+
+            <Entry
+                x:Name="MateriaEntry"
+                Text="{Binding Materia}"
+                Placeholder="Ingrese la materia"
+                TextColor="White"/>
+
+            <Button
+                x:Name="ConfirmarBtn"
+                Text="Confirmar"
+                Padding="50,0,50,0"
+                FontSize="20"
+                Clicked="Confirmar_Clicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
